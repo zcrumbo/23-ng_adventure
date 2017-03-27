@@ -1,0 +1,9 @@
+@import '../../scss/lib/base/global-vars';
+
+section.game-pad{
+  @include infoBoxSize;
+
+  button {
+
+  }
+}

@@ -1,0 +1,5 @@
+@import '../../scss/lib/base/global-vars';
+
+section.player-info{
+  @include infoBoxSize;
+}

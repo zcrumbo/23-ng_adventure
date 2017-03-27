@@ -1,0 +1,23 @@
+<section class="player-info">
+  <h2>stats:</h2>
+
+  <ul ng-if="playerInfoCtrl.nameSet">
+    <li>
+      <h1>name: </h1>
+      <span>{{ playerInfoCtrl.player.name }}</span>
+    </li>
+    <li>
+      <span>hp:</span>
+      <span>{{ playerInfoCtrl.player.hp }}</span>
+    </li>
+    <li>
+      <span>location:</span>
+      <span>{{ playerInfoCtrl.player.location }} </span>
+    </li>
+  </ul>
+  <form ng-if="!playerInfoCtrl.nameSet" ng-submit="playerInfoCtrl.nameSet=true">
+  <label for="player-name"></label>
+  <input  name="player-name" ng-model="playerInfoCtrl.player.name" type="text">
+  <button type="submit">That's my Name!</button>
+  </form>
+</section>
