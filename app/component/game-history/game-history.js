@@ -16,6 +16,7 @@ function GameHistoryController($log, playerService) {
   $log.debug('GameHistoryController');
 
   this.history = playerService.history;
+  this.player = playerService.player;
 
 
 }

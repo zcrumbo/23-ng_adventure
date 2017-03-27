@@ -1,4 +1,4 @@
-<section class="game-history">
+<section class="game-history" ng-hide="!gameHistoryCtrl.player.nameSet">
   <h2>history</h2>
   <ul ng-repeat="history in gameHistoryCtrl.history">
     <li><span>turn:</span>

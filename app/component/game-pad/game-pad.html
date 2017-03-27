@@ -1,4 +1,4 @@
-<section class="game-pad">
+<section class="game-pad" ng-hide="!gamePadCtrl.player.nameSet">
   <h2>controls</h2>
   <form name="gamePad" novalidate ng-submit="gamePadCtrl.movePlayer()">
     <label for="directions">Direction</label>

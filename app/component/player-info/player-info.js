@@ -9,10 +9,17 @@ prettyBigAdventure.component('playerInfo', {
   controllerAs: 'playerInfoCtrl'
 });
 
-prettyBigAdventure.controller('PlayerInfoController', ['$log', 'playerService', PlayerInfoController]);
+prettyBigAdventure.controller('PlayerInfoController', ['$log', 'playerService', 'mapService', PlayerInfoController]);
 
-function PlayerInfoController($log, playerService) {
-  $log.debug('PlayerInfoController', this);
+function PlayerInfoController($log, playerService, mapService) {
   this.player = playerService.player;
-  this.prop = 'hello there';
+  this.history = playerService.history;
+  $log.debug('PlayerInfoController', playerService.player.desc);
+  this.startGame = function(){
+
+    playerService.player.nameSet = true;
+    playerService.history[0].desc = mapService.mapData.field.desc;
+    playerService.player.display = mapService.mapData.field.display;
+
+  };
 }

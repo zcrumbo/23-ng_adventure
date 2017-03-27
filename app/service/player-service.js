@@ -11,11 +11,13 @@ function playerService($q, $log, mapService) {
   let service = {};
 
   let turn = 0;
+
   let player = service.player = {
     name: '',
     location: 'field',
     hp: 16,
-    display: mapService.mapData['field'].display
+    display: require('../display/startup.txt'),
+    nameSet: false
 
   };
 

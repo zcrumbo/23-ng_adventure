@@ -16,6 +16,7 @@ function GamePadController($log, playerService) {
 
   this.directions = ['north', 'south', 'east', 'west'];
   this.moveDirection = this.directions[0];
+  this.player = playerService.player;
 
   this.movePlayer = function() {
     playerService.movePlayer(this.moveDirection)
